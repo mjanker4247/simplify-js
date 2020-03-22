@@ -1,0 +1,27 @@
+{
+  "name": "simplify-js",
+  "authors": [
+    "Marco Janker <marco.janker@gmail.com>"
+  ],
+  "description": "simplify data",
+  "main": "index.html",
+  "keywords": [
+    "simplify"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chart.js": "chartjs#^2.9.3",
+    "chartjs-plugin-zoom": "^0.7.5",
+    "hammerjs": "^2.0.8",
+    "file-saver": "^2.0.2"
+  }
+}
