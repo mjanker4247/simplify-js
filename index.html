@@ -7,7 +7,9 @@
 	<script src="bower_components/chart.js/dist/Chart.bundle.min.js"></script>
 	<script src="bower_components/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js"></script>
 	<script src="bower_components/hammerjs/hammer.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/file-saver/dist/FileSaver.min.js"></script>
+	<script src="bower_components/papaparse/papaparse.min.js"></script>
 
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="fd-slider.css" />
@@ -20,11 +22,13 @@
 		<h1>Simplify.js</h1>
 
 		<p>
-			<button onclick="resetZoom()">Reset Zoom</button>
+			<button id="resetZoom">Reset Zoom</button>
 			<label><input id="quality" type="checkbox" /> highest quality</label>
 			<button id="toggleScale">Toggle Scale Type</button>
-			<button id="savechart">Save chart</button>
-			<button id="export">Export data</button>
+			<button id="savechart">Save chart...</button>
+			<input id="files" type="file" multiple="" />
+			<button id="import">Import</button>
+			<button id="export">Export data...</button>
 		</p>
 		<div class="canvas-container cf">
 			<p class="tolerance-container"><input id="tolerance" type="text" value="0.1" /></p>
@@ -35,8 +39,6 @@
 				After simplification: <em id="point-num-after"></em> points (~<em id="point-num-times"></em> times less)<br />
 				Performed in <em id="duration"></em> ms
 			</p>
-
-			
 
 			<div class="chart-container" style="position: relative">
 				<canvas id="chart"></canvas>
